@@ -1,7 +1,7 @@
 """Creates the blueprints for the authentication relates to logging in then runs the html file associated,
     currently implemented with login, logout, and sign up"""
 
-from flask import Blueprint, render_template
+from flask import Blueprint, redirect, render_template, url_for
 
 auth = Blueprint("auth", __name__)
 
@@ -18,4 +18,4 @@ def signup():
 
 @auth.route("/logout")
 def logout():
-    return render_template("logout.html")
+    return redirect(url_for(("views.home")))
