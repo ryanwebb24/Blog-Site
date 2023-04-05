@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% block title %} Home {% endblock %} {% block content
-%}
+{% extends "base.html" %}{% block title %} Home {% endblock %}
+{%block content %}
 <div class="container">
-    <h1>Welcome to my blog</h1>
+    <h1 align="center">Simplifying AI: My Learning Journey</h1>
 </div>
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
@@ -76,4 +76,16 @@
     object-fit: cover;
   }
 </style>
+<br>
+<h1 align="center">{% block header %}Posts{% endblock %}</h1>
+{% include "posts_div.html" %}
+<div align="center">
+  <a href="/create-post">
+      <button type="button" class="btn btn-primary btn-lg">
+          Create a Post
+      </button>
+  </a>
+</div>
+<br>
 {% endblock %}
+
